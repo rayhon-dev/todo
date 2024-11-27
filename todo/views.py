@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 
 def todo_list(request):
-    html_reponse = """
+    html_response = """
         <style>
 
 
@@ -87,6 +87,8 @@ def todo_list(request):
 
         </form>
         
+        <h1>Mavjud vazifalar</h1>
+        
         <table class="table table-border table-dark">
         
             <thead>
@@ -99,7 +101,7 @@ def todo_list(request):
                     
                 </tr>
             </thead>
-            <thbody>
+            <tbody>
                  <tr>
                      <td>Hisobot tayyorlash</td>
                      <td>Oylik moliyaviy hisobotni tayyorlash va topshirish</td>
@@ -133,24 +135,16 @@ def todo_list(request):
                 </tr>
                 
                 <tr>
-                    <td>Xodimlar uchun trening</td>
-                    <td>Yangi dasturiy ta'minot bo'yicha xodimlarga qo'llanma berish</td>
-                    <td>O'rta</td> 
-                    <td>2023-06-10</td> 
-                    <td>Rejalashtirilgan</td> 
-                </tr>
-                
-                <tr>
                     <td>Loyiha hujjatlarini yangilash</td>
                     <td>Joriy loyihaning tenik hujjatlarini yangilash va arxivlash</td>
                     <td>Past</td> 
                     <td>2023-06-15</td> 
                     <td>Boshlanmagan</td> 
                 </tr>
-            </thbody>
+            </tbody>
             
         </table>    
         
     """
-    return HttpResponse(html_reponse)
+    return HttpResponse(html_response)
 
